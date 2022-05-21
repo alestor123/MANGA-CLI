@@ -1,0 +1,32 @@
+{
+  "name": "manga-cli",
+  "version": "1.0.0",
+  "description": "This is a simple code for fetching manga in the comfort of cli",
+  "main": "App.js",
+  "funding": "https://alestor123.is-a.dev/donate",
+  "dependencies": {},
+
+  "devDependencies": {},
+  "type": "module",
+	"bin": {
+		"manga":"cli.js"
+	},
+  "engines": {
+		"node": ">=10"
+	},
+  "scripts": {
+    "test": "standard && node test.js | tap-spec",
+    "example": "node run.js",
+		"lint": "standard . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alestor123/MANGA-CLI.git"
+  },
+  "author": "Alestor Aldous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alestor123/MANGA-CLI/issues"
+  },
+  "homepage": "https://github.com/alestor123/MANGA-CLI#readme"
+}
