@@ -1,6 +1,6 @@
 {
   "name": "manga-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a simple code for fetching manga in the comfort of cli",
   "main": "App.js",
   "funding": "https://alestor123.is-a.dev/donate",
