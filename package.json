@@ -4,27 +4,86 @@
   "description": "This is a simple code for fetching manga in the comfort of cli",
   "main": "App.js",
   "funding": "https://alestor123.is-a.dev/donate",
-  "dependencies": {},
-
-  "devDependencies": {},
-  "type": "module",
-	"bin": {
-		"manga":"cli.js"
-	},
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0",
+    "figlet": "^1.5.0",
+    "images-to-pdf": "^1.0.3",
+    "log-update": "^4.0.0",
+    "minimist": "^1.2.6",
+    "prompt-checkbox": "^2.2.0",
+    "prompt-list": "^3.2.0",
+    "prompt-sync": "^4.2.0",
+    "rimraf": "^3.0.2",
+    "tmp": "^0.2.1",
+    "x-ray": "^2.3.4"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "tap": "^15.0.9",
+    "tap-spec": "^5.0.0"
+  },
+  "bin": {
+    "manga": "cli.js"
+  },
   "engines": {
-		"node": ">=10"
-	},
+    "node": ">=10"
+  },
+  "files": [
+    "App.js",
+    "cli.js",
+    "opt.js",
+    "assets/image/thanks.jpeg",
+    "man/help.man"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "node",
+    "nodejs",
+    "tool",
+    "entertainment",
+    "novel",
+    "manga",
+    "anime",
+    "fetch",
+    "awesome",
+    "pdf",
+    "x-ray",
+    "comics",
+    "manga-downloader",
+    "manga-reader",
+    "novel-downloader",
+    "ebook",
+    "chapters",
+    "episodes",
+    "book",
+    "read",
+    "reading",
+    "manganato",
+    "github",
+    "web",
+    "scraping",
+    "scrapper",
+    "scrape",
+    "page",
+    "axios"
+  ],
   "scripts": {
     "test": "standard && node test.js | tap-spec",
     "example": "node run.js",
-		"lint": "standard . --fix"
+    "lint": "standard . --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alestor123/MANGA-CLI.git"
   },
-  "author": "Alestor Aldous",
-  "license": "ISC",
+  "author": {
+    "name": "Alestor Aldous",
+    "email": "alestoraldous@gmail.com",
+    "url": "https://alestor123.github.io/"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alestor123/MANGA-CLI/issues"
   },

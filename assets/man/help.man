@@ -1,0 +1,13 @@
+
+        Usage: manga -s <path>
+
+> by default pdf file will be saved in the current directory  
+
+Arguments : 
+
+-v, --version            get current version
+-h, --help               give this help list
+-i, --issue              give the url to issue page
+-d, --documentation      give the url to documentation page
+-s, --save               set download path(optional)(by default pdf file will be saved in the current working directory)
+-r, --remove             remove thanks page(optional)
