@@ -38,10 +38,18 @@ $ npm install -g manga-cli
 $ manga -s <path>
 ```
 
+`` -s <path> `` is optional
+
 # Fetch ALL the chapter
 > use ``all`` command to fetch all chapters 
 ```
 Chapter number : all
+```
+
+# EACCESS ERROR :
+> If your facing eacess err while installing use this command :
+```
+$ npm install -g manga-cli --unsafe-perm=true --allow-root
 ```
 
 # Screenshots    

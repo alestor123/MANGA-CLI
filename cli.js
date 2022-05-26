@@ -19,7 +19,7 @@ const List = require('prompt-list')
 const { textSync } = require('figlet')
 const { writeFileSync } = require('fs')
 const baseurl = 'https://readmanganato.com'
-const thanks = './assets/image/thanks.jpeg'
+const thanks = 'https://raw.githubusercontent.com/alestor123/MANGA-CLI/8018b8d69a8d24a7cea397230352ed566ac25be2/assets/image/thanks.jpeg'
 const frames = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
 let index = 0
 let processed = false
@@ -59,6 +59,7 @@ process.on('SIGINT', Abort); // not working as intented
         info.pgnum = info.pages.length
         const tmpobj = tmp.dirSync()
         info.pgpaths = []
+        if (!argo.thanksMsg) info.pages.push(thanks)// make it optionalargvs
         for (const img of info.pages) {
           // console.log(basename(parse(img).pathname))
           info.pgpaths.push(join(tmpobj.name, basename(new URL(img).pathname)))
@@ -66,7 +67,6 @@ process.on('SIGINT', Abort); // not working as intented
             if (err) throw err
           })
         };
-        if (!argo.thanksMsg) info.pgpaths.push(thanks)// make it optionalargvs
         const mangapdfPath = resolve(join(argo.path, nameGenerator(info.title, chnum)))
         imagesToPdf(info.pgpaths, mangapdfPath)
         sync(tmpobj.name)
