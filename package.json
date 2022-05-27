@@ -1,6 +1,6 @@
 {
   "name": "manga-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is a simple code for fetching manga in the comfort of cli",
   "main": "App.js",
   "funding": "https://alestor123.is-a.dev/donate",
@@ -8,9 +8,10 @@
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "figlet": "^1.5.0",
-    "images-to-pdf": "^1.0.3",
+    "image-size": "^1.0.1",
     "log-update": "^4.0.0",
     "minimist": "^1.2.6",
+    "pdfkit": "^0.13.0",
     "prompt-checkbox": "^2.2.0",
     "prompt-list": "^3.2.0",
     "prompt-sync": "^4.2.0",
@@ -33,6 +34,7 @@
     "App.js",
     "cli.js",
     "opt.js",
+    "imgpdf.js",
     "assets/man/help.man"
   ],
   "keywords": [

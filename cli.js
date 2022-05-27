@@ -13,7 +13,7 @@ const axios = require('axios')
 const options = require('minimist')(process.argv.slice(2))
 const ray = require('x-ray')()
 const tmp = require('tmp')
-const imagesToPdf = require('images-to-pdf')
+const imgpdf = require('./imgpdf')
 const prompt = require('prompt-sync')()
 const List = require('prompt-list')
 const { textSync } = require('figlet')
@@ -61,14 +61,13 @@ process.on('SIGINT', Abort); // not working as intented
         info.pgpaths = []
         if (!argo.thanksMsg) info.pages.push(thanks)// make it optionalargvs
         for (const img of info.pages) {
-          // console.log(basename(parse(img).pathname))
           info.pgpaths.push(join(tmpobj.name, basename(new URL(img).pathname)))
           writeFileSync(join(tmpobj.name, basename(new URL(img).pathname)), (await axios.get(img, { responseType: 'arraybuffer' })).data, err => {
             if (err) throw err
           })
         };
         const mangapdfPath = resolve(join(argo.path, nameGenerator(info.title, chnum)))
-        imagesToPdf(info.pgpaths, mangapdfPath)
+        imgpdf(info.pgpaths, mangapdfPath)
         sync(tmpobj.name)
         processed = true
         spinner()
